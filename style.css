@@ -26,6 +26,8 @@ body {
   font-size: 18px;
   text-decoration: none;
   border: 2px solid #00D2B5;
+  -webkit-box-shadow: 0 4px 20px -5px #00D2B5;
+          box-shadow: 0 4px 20px -5px #00D2B5;
 }
 
 .theme-btn:hover {
@@ -33,11 +35,32 @@ body {
   color: #000;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .theme-icon {
   border-radius: 25px;
-  padding: 5px;
+  color: #fff;
+  background-color: #00D2B5;
+  -webkit-box-shadow: 0 4px 20px -5px #00D2B5;
+          box-shadow: 0 4px 20px -5px #00D2B5;
+  font-size: 26px;
+}
+
+.fcard {
+  border-radius: 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.fcard:hover {
+  background-color: #00D2B5;
+  color: #fff;
+}
+
+.fcard:hover .material-icons {
+  background-color: #fff;
   color: #00D2B5;
 }
 
