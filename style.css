@@ -223,4 +223,37 @@ body {
 .contact span {
   color: #00D2B5;
 }
+
+.form {
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+.form nav {
+  background-color: #fff;
+}
+
+.form .card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.form .col-lg-12, .form .col-lg-5 {
+  border-bottom: 1px solid #c9c9c9;
+  margin-top: 50px;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.form .btn {
+  width: 100%;
+  background-color: #00D2B5;
+  color: #fff;
+  padding: 10px;
+}
 /*# sourceMappingURL=style.css.map */
