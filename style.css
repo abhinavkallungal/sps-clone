@@ -224,36 +224,340 @@ body {
   color: #00D2B5;
 }
 
-.form {
+.regform {
   background-color: #fafafa;
   min-height: 100vh;
 }
 
-.form nav {
+.regform h3 {
+  color: #00D2B5;
+  font-weight: bold;
+}
+
+.regform nav {
   background-color: #fff;
 }
 
-.form .card {
+.regform .card {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
 
-.form .col-lg-12, .form .col-lg-5 {
-  border-bottom: 1px solid #c9c9c9;
+.regform .col-lg-12, .regform .col-lg-5 {
+  border-bottom: 1px solid #7e7373;
   margin-top: 50px;
 }
 
-.form input, .form textarea {
+.regform input, .regform textarea, .regform select {
   width: 100%;
   border: none;
   outline: none;
 }
 
-.form .btn {
+.regform .btn {
   width: 100%;
   background-color: #00D2B5;
   color: #fff;
   padding: 10px;
+}
+
+.regform form .formControl.error {
+  border-bottom: 1px solid red;
+}
+
+.regform form .formControl.error span {
+  color: red;
+}
+
+.regform form .formControl.success {
+  border-bottom: 1px solid green;
+}
+
+.regform form .formControl.success span {
+  color: green;
+}
+
+form.chat * {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+form.chat {
+  margin: 0;
+  cursor: default;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none;
+}
+
+form.chat span.spinner {
+  -webkit-animation: loading-bar 2s 1;
+          animation: loading-bar 2s 1;
+  display: block;
+  height: 2px;
+  background-color: #22c9b5;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+form.chat .messages {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  height: 90%;
+  width: 100%;
+  padding: 2% 3%;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+form.chat ::-webkit-scrollbar {
+  width: 3px;
+  height: 1px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+form.chat ::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+form.chat ::-webkit-scrollbar-thumb {
+  background-color: #bec4c8;
+  border-radius: 3px;
+}
+
+form.chat .message {
+  display: block;
+  width: 98%;
+  padding: 0.5%;
+}
+
+form.chat .out,
+form.chat .in {
+  max-width: 50%;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+form.chat .message:hover .out {
+  -webkit-transform: translateX(-130px);
+          transform: translateX(-130px);
+}
+
+form.chat .message:hover .in {
+  -webkit-transform: translateX(130px);
+          transform: translateX(130px);
+}
+
+form.chat .message:hover date {
+  opacity: 1;
+}
+
+form.chat .out,
+.in {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 25px;
+  clear: both;
+}
+
+form.chat .out {
+  background: #22d1b5;
+  color: white;
+  float: right;
+  clear: both;
+  border-bottom-right-radius: 20px 0px\9;
+}
+
+form.chat .out:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -8px;
+  height: 19px;
+  border-right: 20px solid #22d1b5;
+  border-bottom-left-radius: 16px 14px;
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+  border-bottom-left-radius: 15px 0px\9;
+  -webkit-transform: translate(-1px, -2px) \9;
+          transform: translate(-1px, -2px) \9;
+}
+
+form.chat .out:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -42px;
+  width: 12px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+          transform: translate(-30px, -2px);
+}
+
+form.chat .initial {
+  background: #eee;
+  color: #999;
+  position: absolute;
+  padding: 8px 0;
+  border-radius: 50%;
+  right: -40px;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  width: 32px;
+  display: inline;
+  text-align: center;
+}
+
+form.chat .in {
+  background: #E5E5EA;
+  color: black;
+  float: left;
+  clear: both;
+  border-bottom-left-radius: 30px 0px\9;
+}
+
+form.chat .in:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -7px;
+  height: 19px;
+  border-left: 20px solid #E5E5EA;
+  border-bottom-right-radius: 16px 14px;
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+  border-bottom-right-radius: 15px 0px\9;
+  -webkit-transform: translate(-1px, -2px) \9;
+          transform: translate(-1px, -2px) \9;
+}
+
+form.chat .in:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 4px;
+  width: 26px;
+  height: 20px;
+  background: white;
+  border-bottom-right-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+          transform: translate(-30px, -2px);
+}
+
+form.chat date {
+  position: absolute;
+  top: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #8b8b90;
+  opacity: 0;
+}
+
+form.chat .out date {
+  left: 105%;
+}
+
+form.chat input {
+  font: 400 13px 'Open Sans', sans-serif;
+  border: 0;
+  padding: 0 15px;
+  height: 10%;
+  outline: 0;
+}
+
+form.chat input[type='text'] {
+  width: 73%;
+  float: left;
+}
+
+form.chat input[type='submit'] {
+  width: 23%;
+  background: transparent;
+  color: #00E34D;
+  font-weight: 700;
+  text-align: right;
+  float: right;
+}
+
+form.chat .out,
+form.chat .in {
+  font-size: 16px;
+}
+
+form.chat .message:hover .out {
+  -webkit-transform: translateY(18px);
+          transform: translateY(18px);
+}
+
+form.chat .message:hover .in {
+  -webkit-transform: translateY(18px);
+          transform: translateY(18px);
+}
+
+form.chat .out date,
+form.chat .in date {
+  top: -20px;
+  left: auto;
+  font-size: 12px;
+}
+
+form.chat .out,
+form.chat .in {
+  max-width: 90%;
+}
+
+@-webkit-keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.FAQ {
+  height: 500px;
 }
 /*# sourceMappingURL=style.css.map */

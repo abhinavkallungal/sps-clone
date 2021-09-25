@@ -1,83 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>SPS | School of Practical Studies</title>
-</head>
-<body>
-    <div class="form">
-        <nav class="">
-            <div class="container text-center p-4">
-                <h3 class="">SPS<span class="theme-color">.</span> </h3>
-            </div>
-        </nav>
-        <div class="container mt-5 mb-5 p-5">
-            <div class="card shadow p-5">
-                <div class="container">
-                <h3>REGISTRATION</h3>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="text" placeholder="Full Name" id="fullName">
-                        <span class="message"></span>
-                    </div>
-                    <div class="col-lg-5 mr-auto">
-                        <input type="text" placeholder="Place">
-                    </div>
-                    <div class="col-lg-5 ml-auto">
-                        <input type="text" placeholder="Full Name">
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div class="col-lg-5 mr-auto">
-                        <input type="text" placeholder="Contact No">
-                    </div>
-                    <div class="col-lg-5 ml-auto">
-                        <input type="text" placeholder="Employment Status">
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="text" placeholder="Educational Qualification">
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="text" placeholder="Name of College / Organisation">
-                    </div>
-                    <div class="col-lg-5">
-                        <input type="text" placeholder="Year of Graduation">
-                    </div>
-                    <div class="col-lg-12">
-                        <textarea name="" id="" cols="10" rows="2"  placeholder="Tell us more about you"></textarea>
-                    </div>
-                    <div class="col-lg-12">
-                        <textarea name="" id="" cols="10" rows="2"  placeholder="Why do you want to join SPS?"></textarea>
-                    </div><div class="col-lg-12">
-                        <textarea name="" id="" cols="10" rows="2"  placeholder="What motivates you to work hard every day? "></textarea>
-                    </div>
-                    <div class="col-lg-12">
-                        <input type="text" placeholder="From Where did you learn about SPS?">
-                    </div>
-                    <div class="col-lg-12">
-                        <span>
+  </head>
+  <body>
+    <div class="regform"  >
+      <nav class="">
+        <div class="container text-center p-4">
+          <h3 class="">SPS<span class="theme-color">.</span></h3>
+        </div>
+      </nav>
+      <div class="container mt-5 mb-5 p-5">
+        <div class="card shadow p-5">
+          <div class="container">  
+            <h3>REGISTRATION</h3>
+            <form action="./" method="post" id="form">
+              <div class="row">
+                <div class="col-lg-12 formControl">
+                  <input type="text" placeholder="Full Name" id="fullName" />
+                  <span class="message"></span>
+                </div>
+                <div class="col-lg-5 mr-auto formControl">
+                  <input type="text" placeholder="Place" id="place" />
+                </div>
+                <div class="col-lg-5 ml-auto formControl">
+                    <select class="form-select" aria-label="Default select example" id="gender">
+                        <option disabled selected>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                </div>
+                <div class="col-lg-12 formControl">
+                  <input type="text" placeholder="Email" id="email" />
+                </div>
+                <div class="col-lg-5 mr-auto formControl">
+                  <input type="text" placeholder="Contact No" />
+                </div>
+                <div class="col-lg-5 ml-auto formControl">
+                  <select class="form-select" aria-label="Default select example">
+                    <option disabled selected>Employment Status</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Fresher">Fresher</option>
+                    <option value="Student">Student</option>
+                  </select>
+                </div>
+                <div class="col-lg-12 formControl">
+                  <input type="text" placeholder="Educational Qualification" />
+                </div>
+                <div class="col-lg-12 formControl">
+                  <input
+                    type="text"
+                    placeholder="Name of College / Organisation"
+                  />
+                </div>
+                <div class="col-lg-5 formControl">
+                  <input type="text" placeholder="Year of Graduation" />
+                </div>
+                <div class="col-lg-12 formControl">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="10"
+                    rows="2"
+                    placeholder="Tell us more about you"
+                  ></textarea>
+                </div>
+                <div class="col-lg-12 formControl">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="10"
+                    rows="2"
+                    placeholder="Why do you want to join SPS?"
+                  ></textarea>
+                </div>
+                <div class="col-lg-12 formControl">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="10"
+                    rows="2"
+                    placeholder="What motivates you to work hard every day? "
+                  ></textarea>
+                </div>
+                <div class="col-lg-12 formControl">
+                  <input
+                    type="text"
+                    placeholder="From Where did you learn about SPS?"
+                  />
+                </div>
+                <div class="col-lg-12 formControl">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <span class="" for="">
                             I agree that I have read and understood all the FAQs
                         </span>
-                    </div>
-                    <div class="col-lg-12 mt-5 ">
-                        <a href="" class="btn mt-5">REGISTER</a>
-                    </div>
                 </div>
-            </div>
-            </div>
-                
+                <div class="col-lg-12 mt-5 formControl">
+                    <input class=" btn mt-5" type="submit" value="Submit">
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        
+      </div>
     </div>
-    
-    <script src="./validation.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-</body>
+    <script src="./validation.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
