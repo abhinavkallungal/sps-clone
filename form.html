@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,96 +20,159 @@
     <div class="regform"  >
       <nav class="">
         <div class="container text-center p-4">
+          <a href="./index.html">
           <h3 class="">SPS<span class="theme-color">.</span></h3>
+        </a>
         </div>
       </nav>
       <div class="container mt-5 mb-5 p-5">
         <div class="card shadow p-5">
           <div class="container">  
             <h3>REGISTRATION</h3>
-            <form action="./" method="post" id="form">
+            <form id="form">
               <div class="row">
-                <div class="col-lg-12 formControl">
-                  <input type="text" placeholder="Full Name" id="fullName" />
-                  <span class="message"></span>
+                <div class=" col-lg-12 ">
+                  <div class="formControl">
+                    <input type="text" placeholder="Full Name" id="fullName" name="fullName"  />
+                    <span class="msg"></span>
+                  </div>
                 </div>
-                <div class="col-lg-5 mr-auto formControl">
-                  <input type="text" placeholder="Place" id="place" />
+                <div class=" col-lg-5 mr-auto ">
+                  <div class="formControl">
+                    <input type="text" placeholder="Place" id="place"  name ="place"/>
+                    <span class="msg"></span>
+                  </div>
                 </div>
-                <div class="col-lg-5 ml-auto formControl">
-                    <select class="form-select" aria-label="Default select example" id="gender">
-                        <option disabled selected>Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                      </select>
+                <div class="col-lg-5 ml-auto ">
+                  <div class="formControl">
+                    <select class="form-select" aria-label="Default select example" id="gender" name="gender">
+                      <option disabled selected value="">Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    <span class="msg"></span>
+                  </div>
                 </div>
-                <div class="col-lg-12 formControl">
-                  <input type="text" placeholder="Email" id="email" />
+                <div class="col-lg-12 ">
+                  <div class="formControL">
+                    <input type="text" placeholder="Email" id="email" name="email" />
+                    <span class="msg"></span>
+                  </div>
                 </div>
-                <div class="col-lg-5 mr-auto formControl">
-                  <input type="text" placeholder="Contact No" />
+                <div class="col-lg-5 mr-auto ">
+                  <div class="formControl">
+                    <input type="number" placeholder="Contact No"  id="number" name="number" />
+                    <span class="msg"></span>
+                  </div>
+
                 </div>
-                <div class="col-lg-5 ml-auto formControl">
-                  <select class="form-select" aria-label="Default select example">
-                    <option disabled selected>Employment Status</option>
-                    <option value="Employed">Employed</option>
-                    <option value="Fresher">Fresher</option>
-                    <option value="Student">Student</option>
-                  </select>
+                <div class="col-lg-5 ml-auto ">
+                  <div class="formControl">
+                    <select class="form-select" aria-label="Default select example" id="Employment" name="Employment">
+                      <option disabled selected value="">Employment Status</option>
+                      <option value="Employed">Employed</option>
+                      <option value="Fresher">Fresher</option>
+                      <option value="Student">Student</option>
+                    </select>
+                    <span class="msg"></span>
+                  </div>
                 </div>
-                <div class="col-lg-12 formControl">
-                  <input type="text" placeholder="Educational Qualification" />
+                <div class="col-lg-12 ">
+                  <div class="formControl">
+                    <select class="form-select" aria-label="Default select example" id="Educational" name="Educational">
+                      <option disabled selected value="">Educational Qualification</option>
+                      <option value="B.Tech">B.Tech</option>
+                      <option value="M.Tech">M.Tech</option>
+                      <option value="BCA/MCA">BCA/MCA</option>
+                      <option value="Bsc/Msc">Bsc/Msc</option>
+                      <option value="Diploma">Diploma</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <span class="msg"></span>                
+                  </div>
                 </div>
-                <div class="col-lg-12 formControl">
-                  <input
+                <div class="col-lg-12 ">
+                  <div class="formControl">
+                    <input
                     type="text"
                     placeholder="Name of College / Organisation"
-                  />
+                    id="College"
+                    name="College"
+                    />
+                    <span class="msg"></span>
+                  </div>
+
                 </div>
-                <div class="col-lg-5 formControl">
-                  <input type="text" placeholder="Year of Graduation" />
+                <div class="col-lg-5 ">
+                  <div class="formControl">
+
+                    <input type="number" placeholder="Year of Graduation" min="1950" max="2021" id="yog" name="yog"/>
+                    <span class="msg"></span>
+                  </div>
                 </div>
-                <div class="col-lg-12 formControl">
-                  <textarea
-                    name=""
-                    id=""
+                <div class="col-lg-12 ">
+                  <div class="formControl">
+
+                    <textarea
+                    name="aboutYou"
+                    id="aboutYou"
                     cols="10"
                     rows="2"
                     placeholder="Tell us more about you"
-                  ></textarea>
+                    ></textarea>
+                    <span class="msg"></span>
+                  </div>
+
                 </div>
-                <div class="col-lg-12 formControl">
-                  <textarea
-                    name=""
-                    id=""
+                <div class="col-lg-12 ">
+                  <div class="formControl">
+                    <textarea
+                    name="whyjoinSPS"
+                    id="whyjoinSPS"
                     cols="10"
                     rows="2"
                     placeholder="Why do you want to join SPS?"
-                  ></textarea>
+                    ></textarea>
+                    <span class="msg"></span>
+                  </div>
+
                 </div>
-                <div class="col-lg-12 formControl">
-                  <textarea
-                    name=""
-                    id=""
+                <div class="col-lg-12 ">
+                  <div class="formControl">
+                    <textarea
+                    name="motivates"
+                    id="motivates"
                     cols="10"
                     rows="2"
                     placeholder="What motivates you to work hard every day? "
-                  ></textarea>
+                    ></textarea>
+                    <span class="msg"></span>
+                  </div>
+
                 </div>
-                <div class="col-lg-12 formControl">
-                  <input
-                    type="text"
-                    placeholder="From Where did you learn about SPS?"
-                  />
+                <div class="col-lg-12 ">
+                  <div class="formControl">
+                    <select name="heared" id="heared">
+                      <option disabled="disabled" selected="selected" value="">From where did you learn about SPS?</option>
+                      <option value="CrossRoads Youtube Channel">CrossRoads Youtube Channel</option>
+                      <option value="Youtube">Youtube</option>
+                      <option value="Friends">Friends</option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Whatsapp_Group">Whatsapp Group</option>
+                    </select>
+                    <span class="msg"></span>
+                  </div>
+
                 </div>
-                <div class="col-lg-12 formControl">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <span class="" for="">
-                            I agree that I have read and understood all the FAQs
-                        </span>
+                <div class="col-lg-12 ">
+                  <div class="formControl">
+                  <Input class="input--style-2" type="checkbox" name="entry.795502834" id="agree" value="true" >&nbsp;I agree that I have read and understood all the <a href="../index.html#faq">FAQs</a>
+                  <span class="msg"></span>
                 </div>
-                <div class="col-lg-12 mt-5 formControl">
-                    <input class=" btn mt-5" type="submit" value="Submit">
+
+                </div>
+                <div class="col-lg-12 mt-5 ">
+                    <input class=" btn mt-5" type="submit" name="agreement" value="Submit">
                 </div>
               </div>
             </form>
@@ -116,12 +180,102 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 
-    <script src="./validation.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $.validator.addMethod("customName", function(value, element) { 
+    return this.optional( element ) || /^([a-zA-Z])+([a-zA-Z])+$/.test( value ); 
+  },'Enter a valid input');
+$("#form").validate({
+            rules:{
+              fullName:{
+                    required: true,
+                    customName:true
+                },
+                place: {
+                    required: true,
+                    customName:true
+                },
+                gender: {
+                    required: true
+                },
+                number: {
+                    required: true,
+                    digits: true,
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                Employment:{
+                    required: true
+                },
+                Educational: {
+                    required: true
+                },
+                College: {
+                    required: true
+                },
+                graduation:  {
+                    required: true,
+                    digits: true
+                },
+                aboutYou:{
+                    required: true
+                },
+                whyjoinSPS: {
+                    required: true
+                },
+                motivates:  {
+                    required: true
+                },
+                heared: {
+                    required: true
+                },
+                agreement: {
+                    required: true
+                }
+            },
+            messages:{
+                // applicantName:{
+                //     customName:'Enter a valid input'
+                // },
+                // applicantPlace: {
+                //     customName:'Enter a valid input'
+                // },
+                contactNo : {
+                    digits: 'enter a valid contact number',
+                },
+           },
+            errorPlacement: function(error,element){
+                if(element.is(":checkbox")){
+                    error.appendTo(element.parents(".agree"));
+                }else{
+                     error.insertAfter( element );
+                }
+            },
+            submitHandler:function(form){
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbz1592I0elJ8c1XjEX8UWG7MuHUENETFqprm0ATUnO5euJJErg/exec",
+                    data:$("#form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                    },
+                    error:function (err){
+                        alert("Something Error")
+            
+                    }
+                })
+            }
+
+})
+    </script>
   </body>
 </html>

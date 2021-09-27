@@ -6,6 +6,11 @@
           box-sizing: border-box;
 }
 
+nav .container a {
+  text-decoration: none;
+  color: #00D2B5;
+}
+
 body {
   font-family: "Montserrat";
 }
@@ -36,7 +41,7 @@ body {
 
 .theme-btn:hover {
   background-color: transparent;
-  color: #fff;
+  color: #000;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
   -webkit-box-shadow: none;
@@ -276,6 +281,10 @@ body {
 
 .regform form .formControl.success span {
   color: green;
+}
+
+.regform form .formControl {
+  width: 100%;
 }
 
 form.chat * {

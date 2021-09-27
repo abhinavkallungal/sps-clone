@@ -6,6 +6,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+nav .container a{
+  text-decoration: none;
+  color: #00D2B5    ;
+}
 body{
     font-family: "Montserrat";
 }
@@ -31,7 +35,7 @@ body{
 
     &:hover{
         background-color: transparent;
-        color: #fff ;
+        color: #000 ;
         transition: all .3s ease-in;
         box-shadow: none;
         
@@ -229,15 +233,20 @@ body{
     form{
       .formControl.error{
         border-bottom: 1px solid red;
+      
         span{
           color: red;
         }
       }
       .formControl.success{
+      
         border-bottom: 1px solid green;
         span{
           color: green;
         }
+      }
+      .formControl{
+        width: 100%;
       }
     }
   }

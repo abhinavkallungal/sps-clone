@@ -11,26 +11,34 @@
   <body>
       <nav class="m-4">
           <div class="container text-center">
+            <a href="#">
               <h3 class="fw-">SPS<span class="theme-color">.</span> </h3>
+            </a>
           </div>
       </nav>
       <div class="hero pb-5">
           <div class="container">
               <div class="row align-items-center">
-                  <div class="col-lg-7">
-                    <div class="videobtn">
-                        <div class="img">
-                            <img src="./assets/whats_sps.png" alt="">
-                        </div>
+                <div class="col-lg-7">
+                  <div id="vidbt1" onclick="this.nextElementSibling.style.display='block';this.style.display='none';onPlayer1click()">
+                    <img src="./assets/whats_sps.png" class="img-fluid mb-5" style="cursor:pointer" />
+                  </div>
+                  <div style="display:none">
+                    <div class="embed-responsive embed-responsive-16by9 mb-5">
+                      <iframe id="vid1" class="embed-responsive-item" src="https://www.youtube.com/embed/I9QGnNvrmoY?enablejsapi=1"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     </div>
                   </div>
+      
+                </div>
                   <div class="col-lg-5 ps-5  ">
                       <h2 class="fw-5 fs-1 mb-5 ">
                         No Tuition Fee Upfront,
                         Pay Only When You Earn.
                       </h2>
                       <p>From Zero to a high paid Software Engineer in 180 days.</p>
-                      <a class="btn theme-btn  mb-4 text-light">Apply Now</a>
+                      <a class="btn theme-btn  mb-4 " href="./form.html">Apply Now</a>
                       <p>(NB: Read all the FAQs carefully before you
                         submit the application)</p>
                   </div>
@@ -82,11 +90,25 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-7">
-              <div class="img">
-                <img src="./assets/Howspsworks.png" alt="">
+
+
+              <div id="vidbt2" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';onPlayer2click()">
+                <img src="./assets/Howspsworks.png" class="img-fluid mt-5 mb-5 " style="cursor:pointer;" />
               </div>
+              <div style="display:none">
+                <div class="embed-responsive embed-responsive-16by9 mt-5 mb-5">
+                  <iframe id="vid2" class="embed-responsive-item" src="https://www.youtube.com/embed/ckub1RSlhic?enablejsapi=1"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+  
+  
+  
             </div>
             <div class="col-lg-5 p-5">
+
+            
               <h2 class="fw-bold mb-4">SPS in Brief?</h2>
               <p class="light-text">School of Practical Studies (SPS) helps the young Indian generation who had benefited nothing from our country’s poor education system by providing an intensive industry relevant training on the leading software technologies. </p>
 
@@ -235,8 +257,17 @@
           <hr>
           <div class="row">
             <div class="col-lg-12">
-              <div class="img">
-                <img src="./assets/whocanjoinsps.png" alt="">
+
+
+              <div id="vidbt3" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';onPlayer3click()">
+                <img src="assets/whocanjoinsps.png" class="img-fluid mt-5 mb-5 " style="cursor:pointer;" />
+              </div>
+              <div style="display:none">
+                <div class="embed-responsive embed-responsive-16by9 mt-5 mb-5">
+                  <iframe id="vid3" class="embed-responsive-item" src="https://www.youtube.com/embed/xkmM6h32lnM?enablejsapi=1"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -325,9 +356,16 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="img">
-                <img src="./assets/howmuchdoesitcost.png" alt="">
-              </div>
+              
+          <div id="vidbt4" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';onPlayer4click()">
+            <img src="assets/howmuchdoesitcost.png" class="img-fluid mt-5 mb-5 " style="cursor:pointer;" />
+          </div>
+          <div style="display:none">
+            <div class="embed-responsive embed-responsive-16by9 mt-5 mb-5">
+              <iframe id="vid4" class="embed-responsive-item" src="https://www.youtube.com/embed/vhG3wKGp2mc?enablejsapi=1"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
             </div>
           </div>
         </div>
@@ -1117,8 +1155,9 @@
                   </div>
                   <div class="info">
                     <h5 class="mb-4">Lets Talk</h5>
-                    <span class="d-block ">+91 7902606117</span>
-                    <span> +91 8086356702</span>
+                    <a href="tel:+917902606117" class="d-block ">+91 7902606117</a>
+                    <a href="tel:+918086356702" class="d-block ">+91 8086356702</a>
+
 
                   </div>
                 </div>
@@ -1143,6 +1182,7 @@
       <div class="footer text-center m-5 p-3">
         <span>Copyright ©Packapeer Academy Pvt Ltd 2021</span>
       </div>
+
 
     
 
